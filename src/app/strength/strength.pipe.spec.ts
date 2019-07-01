@@ -16,4 +16,10 @@ describe('StrengthPipe', () => {
 
     expect(pipe.transform(10)).toEqual('10 (strong)');
   });
+
+  it('should display unbelievable if strength is 20', function () {
+    let pipe = new StrengthPipe();
+
+    expect(pipe.transform(20)).toEqual('20 (unbelievable)');
+  });
 });
